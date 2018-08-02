@@ -12,6 +12,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         @IBOutlet weak var tableView: UITableView!
     var tasks : [Task] = []
+    var selectedIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -39,7 +40,28 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func clickAddButton(_ sender: Any) {
+        
         performSegue(withIdentifier: "addButton", sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let task = tasks[indexPath.row]
+        selectedIndex = indexPath.row
+        
+        performSegue(withIdentifier: "viewTaskSegue", sender: task)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addButton"{
+            let nextVC = segue.destination as! CreateTaskViewController
+            nextVC.previousVC = self
+        }
+        
+        if segue.identifier == "viewTaskSegue"{
+            let nextVC = segue.destination as! CompleteTaskViewController
+            nextVC.task = sender as! Task
+            nextVC.previousVC = self
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

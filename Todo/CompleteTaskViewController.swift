@@ -10,10 +10,14 @@ import UIKit
 
 class CompleteTaskViewController: UIViewController {
 
+    var task = Task()
+    @IBOutlet weak var taskLabel: UILabel!
+    var previousVC = TasksViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        taskLabel.text = task.name
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +25,13 @@ class CompleteTaskViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func completeTask(_ sender: Any) {
+         previousVC.tasks.remove(at: previousVC.selectedIndex)
+        
+        previousVC.tableView.reloadData()
+        navigationController!.popViewController(animated: true);
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -10,6 +10,10 @@ import UIKit
 
 class CreateTaskViewController: UIViewController {
 
+    @IBOutlet weak var taskLabel: UITextField!
+    @IBOutlet weak var importantSwitch: UISwitch!
+   var previousVC = TasksViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +23,16 @@ class CreateTaskViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func buttonClick(_ sender: Any) {
+        let task = Task();
+        task.name = taskLabel.text!
+        task.important = importantSwitch.isOn
+        
+        previousVC.tasks.append(task)
+        previousVC.tableView.reloadData()
+        navigationController!.popViewController(animated: true);
     }
     
 
