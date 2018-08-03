@@ -9,8 +9,8 @@
 import UIKit
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-        @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var tableView: UITableView!
     var tasks : [Task] = []
     var selectedIndex = 0
     override func viewDidLoad() {
@@ -67,7 +67,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
