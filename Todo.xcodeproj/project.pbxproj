@@ -17,6 +17,8 @@
 		A81F9E0F2113957E006959A6 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F9E0E2113957E006959A6 /* Task.swift */; };
 		A81F9E1121139E19006959A6 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F9E1021139E19006959A6 /* CreateTaskViewController.swift */; };
 		A81F9E132113A712006959A6 /* CompleteTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F9E122113A712006959A6 /* CompleteTaskViewController.swift */; };
+		A88ED8342118A87100F9B691 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88ED8332118A87100F9B691 /* LoginViewController.swift */; };
+		A88ED8362118A8C600F9B691 /* agriculture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A88ED8352118A8C600F9B691 /* agriculture.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		A81F9E0E2113957E006959A6 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		A81F9E1021139E19006959A6 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		A81F9E122113A712006959A6 /* CompleteTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTaskViewController.swift; sourceTree = "<group>"; };
+		A88ED8332118A87100F9B691 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A88ED8352118A8C600F9B691 /* agriculture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = agriculture.jpg; path = ../../../Downloads/agriculture.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +107,12 @@
 		A81F9DDF21139152006959A6 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				A88ED8352118A8C600F9B691 /* agriculture.jpg */,
 				A81F9DE021139152006959A6 /* AppDelegate.swift */,
 				A81F9DE221139152006959A6 /* TasksViewController.swift */,
 				A81F9E122113A712006959A6 /* CompleteTaskViewController.swift */,
 				A81F9DE421139152006959A6 /* Main.storyboard */,
+				A88ED8332118A87100F9B691 /* LoginViewController.swift */,
 				A81F9E1021139E19006959A6 /* CreateTaskViewController.swift */,
 				A81F9DE721139154006959A6 /* Assets.xcassets */,
 				A81F9DE921139154006959A6 /* LaunchScreen.storyboard */,
@@ -239,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A81F9DEB21139154006959A6 /* LaunchScreen.storyboard in Resources */,
+				A88ED8362118A8C600F9B691 /* agriculture.jpg in Resources */,
 				A81F9DE821139154006959A6 /* Assets.xcassets in Resources */,
 				A81F9DE621139152006959A6 /* Main.storyboard in Resources */,
 			);
@@ -265,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88ED8342118A87100F9B691 /* LoginViewController.swift in Sources */,
 				A81F9DE321139152006959A6 /* TasksViewController.swift in Sources */,
 				A81F9E0F2113957E006959A6 /* Task.swift in Sources */,
 				A81F9DE121139152006959A6 /* AppDelegate.swift in Sources */,
